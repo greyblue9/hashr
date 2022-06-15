@@ -83,11 +83,7 @@ def check_tab_3() -> None:
 def _save_settings() -> None:
     global close
 
-    close = False
-
-    if theme_var.get() != settings_data["theme"]:
-        close = True
-
+    close = theme_var.get() != settings_data["theme"]
     settings_data["chunk_size"] = chunk_size_var.get()
     settings_data["completion_alert"] = completion_alert_var.get()
     settings_data["theme"] = theme_var.get()
